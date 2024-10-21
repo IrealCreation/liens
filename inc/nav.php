@@ -1,6 +1,6 @@
 	<nav class="navbar sticky-top navbar-dark bg-dark">
 		<div class="container-fluid">
-			<h1 class="navbar-brand">Notes</h1>
+			<h1 class="navbar-brand">Liens</h1>
 
 		    <?php if(isset($user)) { ?>
 			<ul class="navbar-nav">
