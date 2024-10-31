@@ -13,5 +13,3 @@ define("ROOT", $_SERVER["DOCUMENT_ROOT"]);
 define("ROOTHTML", "");
 
 define("SERVER", "https://" . $_SERVER['HTTP_HOST']);
-
-$pdo = new PDO('mysql:dbname=' . DB_NAME . ';host=localhost', DB_USER, DB_PASSWORD);
