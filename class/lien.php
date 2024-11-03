@@ -40,7 +40,9 @@ class Lien {
      * @return void
      */
     public function insert(): void {
-
+        $sql = "INSERT INTO lien (nom, couleur, date_debut) VALUES (?, ?, ?)";
+        $params = [$this->nom, $this->couleur, $this->date_debut];
+        query($sql, $params, false);
     }
 
     /**
@@ -49,6 +51,8 @@ class Lien {
      * @return void
      */
     public function update(): void {
-
+        $sql = "UPDATE lien SET nom = ?, couleur = ?, date_debut = ? WHERE id = ?";
+        $params = [$this->nom, $this->couleur, $this->date_debut, $this->id];
+        query($sql, $params, false);
     }
 }

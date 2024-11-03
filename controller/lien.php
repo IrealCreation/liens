@@ -33,7 +33,6 @@ else {
         $lien->nom = $_POST["nom"];
         $lien->date_debut = $_POST["date_debut"];
         $lien->couleur = $_POST["couleur"];
-        $lien->date_crea = date("Y-m-d");
         $lien->insert();
     }
     else {
