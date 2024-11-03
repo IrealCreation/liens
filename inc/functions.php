@@ -21,7 +21,7 @@ spl_autoload_register(function ($class_name) {
 });
 
 // Fichier de configuration
-require __DIR__ . "/inc/conf.php";
+require __DIR__ . "/conf.php";
 
 // Démarrage de la session
 session_start();
@@ -84,4 +84,17 @@ function toSafeValue(string $string) : string {
 	$string = str_replace("<", "&lt;", $string);
 	$string = str_replace(">", "&gt;", $string);
 	return $string;
+}
+
+/**
+ * Renvoie une "value" par défaut de formulaire HTML si la variable passée en argument existe et n'est pas nulle
+ *
+ * @param mixed $default
+ * @return string
+ */
+function formDefaultValue(mixed $default): string {
+	if(isset($default) && $default != null) {
+		return ' value="' . $default . '" ';
+	}
+	return "";
 }

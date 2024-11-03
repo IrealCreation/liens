@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?= "Liens - " . $title ?></title>
+	<title><?= "Liens - " . $page_titre ?></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Bootstrap -->
-	<link href="<?= ROOTHTML ?>/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<!-- Bootstrap icons -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
@@ -23,3 +23,5 @@
 	<!-- Custom -->
 	<link href="<?= ROOTHTML ?>/style.css" rel="stylesheet" type="text/css">
 	<script src="<?= ROOTHTML ?>/script.js"></script>
+</head>
+<body>
