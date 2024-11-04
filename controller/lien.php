@@ -52,7 +52,6 @@ else {
 
 }
 
-include ROOT . "/inc/meta.php";
-include ROOT . "/inc/nav.php";
+include ROOT . "/inc/header.php";
 include ROOT . "/view/lien_formulaire.php";
 include ROOT . "/inc/footer.php";

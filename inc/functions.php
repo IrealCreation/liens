@@ -95,8 +95,7 @@ function toSafeValue(string $string) : string {
 function verificationConnecte($redirect = true) {
 	if(!isset($_SESSION["utilisateur_id"])) {
 		if($redirect) {
-			$_SESSION["alert"] = "Veuillez vous connecter";
-			$_SESSION["alert_class"] = "error";
+			sessionMessage("Veuillez vous connecter", "danger");
 			header("Location: /login");
 			die;
 		}
@@ -119,4 +118,11 @@ function formDefaultValue(mixed $default): string {
 		return ' value="' . $default . '" ';
 	}
 	return "";
+}
+
+function sessionMessage(string $message, string $type = "success") {
+	$_SESSION["message"] = [
+		"texte" => $message,
+		"type" => $type
+	];
 }
