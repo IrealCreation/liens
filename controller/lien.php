@@ -1,6 +1,6 @@
 <?php
 /**
- * Création / Modification / Suppression d'un lien
+ * CRUD d'un lien
  */
 
 require_once "../inc/functions.php";

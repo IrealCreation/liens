@@ -14,7 +14,7 @@
             <?= $page_titre ?>
         </h3>
 
-        <form action="" method="POST">
+        <form action="/liens/formulaire/" method="POST">
             <div class="row mb-3">
                 <div class="col-sm-5">
                     <label for="form-lien-nom" class="form-label">Nom</label>

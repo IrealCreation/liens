@@ -23,6 +23,21 @@ class Lien {
     }
 
     /**
+     * Récupère les Liens de cet utilisateur
+     *
+     * @param integer $utilisateur_id
+     * @return array<Lien>
+     */
+    public static function selectByUtilisateur(int $utilisateur_id): array {
+        $sql = "SELECT * FROM lien 
+            INNER JOIN lien_utilisateur
+            WHERE utilisateur_id = ?";
+        $params = [$utilisateur_id];
+        $result = query($sql, $params, true, "Lien");
+        return $result;
+    }
+
+    /**
      * Récupère les souvenirs de ce lien
      *
      * @return array<Souvenir>

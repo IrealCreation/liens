@@ -87,6 +87,28 @@ function toSafeValue(string $string) : string {
 }
 
 /**
+ * Vérifie si l'utilisateur est bien connecté
+ *
+ * @param boolean $redirect Doit-on rediriger un utilisateur non connecté, ou renvoyer une erreur ?
+ * @return void
+ */
+function verificationConnecte($redirect = true) {
+	if(!isset($_SESSION["utilisateur_id"])) {
+		if($redirect) {
+			$_SESSION["alert"] = "Veuillez vous connecter";
+			$_SESSION["alert_class"] = "error";
+			header("Location: /login");
+			die;
+		}
+		else {
+			http_response_code(403);
+			echo "Veuillez vous connecter";
+			die;
+		}
+	}
+}
+
+/**
  * Renvoie une "value" par défaut de formulaire HTML si la variable passée en argument existe et n'est pas nulle
  *
  * @param mixed $default

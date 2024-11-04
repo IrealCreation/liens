@@ -1,6 +1,6 @@
 <?php
 
-class User {
+class Utilisateur {
 
 	public int $id;
 
