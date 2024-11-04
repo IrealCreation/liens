@@ -10,6 +10,16 @@ RewriteBase /
 RewriteRule ^liens/formulaire/([0-9]+)/*$ controller/lien.php?id=$1
 RewriteRule ^liens/formulaire/*$ controller/lien.php
 
+# Ajout d'un Texte sur un Souvenir
+RewriteRule ^souvenirs/([0-9]+)/texte/*$ controller/texte.php?souvenir_id=$1
+
+# Affichage d'un Souvenir
+RewriteRule ^souvenirs/([0-9]+)/*$ controller/souvenir.php?id=$1
+
+# CRUD d'un Souvenir (TODO)
+RewriteRule ^souvenirs/formulaire/([0-9]+)*$ controller/souvenir.php?id=$1
+RewriteRule ^souvenirs/formulaire/*$ controller/souvenir.php?id=$1
+
 # Note edit
 RewriteRule ^note/([0-9]+)/*$ note.php?id=$1 [L]
 

@@ -10,9 +10,9 @@
 <div class="container-fluid">
 
     <div class="card">
-        <h3 class="card-header">
+        <h2 class="card-header">
             <?= $page_titre ?>
-        </h3>
+        </h2>
 
         <form action="/liens/formulaire/" method="POST">
             <div class="row mb-3">

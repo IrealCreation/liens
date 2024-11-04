@@ -4,13 +4,13 @@ class Utilisateur {
 
 	public int $id;
 
-	public string $login; // Varchar 50
+	public string $nom; // Varchar 50
 
 	public string $mail; // Varchar 50
 
 	private string $_password; // Varchar 255
 
-	public string $signin; // Date et heure d'inscription. Datetime
+	public string $date_crea; // Date et heure d'inscription. Datetime
 
 
 	function __construct() {

@@ -126,3 +126,8 @@ function sessionMessage(string $message, string $type = "success") {
 		"type" => $type
 	];
 }
+
+function dateLisible(string $date): string {
+	$timestamp = strtotime($date);
+	return date("d/m/Y", $timestamp);
+}

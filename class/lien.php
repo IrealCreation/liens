@@ -17,9 +17,7 @@ class Lien {
         $sql = "SELECT * FROM lien WHERE id = ?";
         $params = [$id];
         $result = query($sql, $params, true, "Lien");
-        if(count($result) == 0)
-            return null;
-        return $result[0];
+        return count($result) == 0 ? null : $result[0];
     }
 
     /**
